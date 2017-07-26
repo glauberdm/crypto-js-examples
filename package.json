@@ -1,0 +1,10 @@
+{
+  "name": "crypto-js-examples",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {}
+}
