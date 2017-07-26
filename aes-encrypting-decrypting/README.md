@@ -6,7 +6,7 @@
 ../aes-encrypting-decrypting$ node encrypt.js
 prompt: Mensagem: 
 ```
-Digite uma mensagem como: **Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Delegadis gente finis, bibendum egestas augue arcu ut est.**
+Digite uma mensagem como: `Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Delegadis gente finis, bibendum egestas augue arcu ut est.`
 
 ```
 prompt: Frase secreta:
@@ -25,7 +25,7 @@ Mensagem encriptada: U2FsdGVkX186zsaQMeNFum1PNuHsrsEqhhaX+GsoG0UIzcyk/B75s5xz76T
 prompt: Mensagem encriptada:
 ```
 
-Copie e cole o resultado de **Mensagem ecriptada:**.
+Copie e cole o resultado de `Mensagem ecriptada:`.
 
 ```
 prompt: Frase secreta:
