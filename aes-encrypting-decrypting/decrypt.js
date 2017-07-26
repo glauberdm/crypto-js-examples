@@ -4,10 +4,10 @@ var CryptoJS = require('crypto-js');
 var promptSchema = {
     properties: {
         mensagem: {
-            message: 'Mensagem:'
+            message: 'Mensagem encriptada'
         },
         frase_secreta: {
-            message: 'Frase Secreta:'
+            message: 'Frase secreta'
         }
     }
 };
@@ -18,19 +18,21 @@ prompt.get(promptSchema, (err, result) => {
     //hasheando frase secreta, sem necessidade de conhecimento ou armazenamento
     var hashedPassword = CryptoJS.SHA256(result.frase_secreta).toString();
 
-    var textToEncrypt = result.mensagem;
+    var encryptedData = result.mensagem;
 
-    //encriptando com a frase secreta hasheada (assinando a mensagem)
-    encryptedData = CryptoJS.AES.encrypt(textToEncrypt, hashedPassword);
+    //decriptando dados recebidos
+    var decryptedData = null;
+    try{
+        decryptedData = CryptoJS.AES.decrypt(encryptedData, hashedPassword);
+        originalData = decryptedData.toString(CryptoJS.enc.Utf8);
 
-    console.log('Mensagem encriptada: '+encryptedData);
+        console.log('Mensagem decriptada: '+originalData);
+    }catch(err){
+        console.log('Mensagem não decriptada, frase secreta inválida!');
+    }
 });
 
 function onErr(err) {
     console.log(err);
     return 1;
 }
-
-
-
-
